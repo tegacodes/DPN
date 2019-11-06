@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd" packageId="34f8683a-dfc0-46b8-acf6-390fe5ca6b92" system="http://gbif.org" scope="system" xml:lang="en">
+  <dataset>
+    <alternateIdentifier>https://doi.org/10.15468/qabb9f</alternateIdentifier>
+    <alternateIdentifier>https://doi.org/10.5281/zenodo.3477891</alternateIdentifier>
+    <alternateIdentifier>432d7b4f-0347-419e-8a7a-44af42683da9</alternateIdentifier>
+    <title xml:lang="eng">Heliconiine Butterfly Collection Records from University of Cambridge</title>
+<creator>
+<individualName>
+<givenName>Chris</givenName>
+<surName>Jiggins</surName>
+</individualName>
+<email>c.jiggins@zoo.cam.ac.uk</email>
+<organizationName>University of Cambridge</organizationName>
+<positionName></positionName>
+<address>
+<deliveryPoint></deliveryPoint>
+<city></city>
+<country></country>
+<postalCode></postalCode>
+</address>
+<phone>
+
+</phone>
+<electronicMailAddress>
+c.jiggins@zoo.cam.ac.uk
+</electronicMailAddress>
+</creator>
+<creator>
+<individualName>
+<givenName>Ian</givenName>
+<surName>Warren</surName>
+</individualName>
+<email>iaw22@cam.ac.uk</email>
+<organizationName>University of Cambridge</organizationName>
+<positionName></positionName>
+<address>
+<deliveryPoint></deliveryPoint>
+<city></city>
+<country>United Kingdom</country>
+<postalCode></postalCode>
+</address>
+<phone>
+
+</phone>
+<electronicMailAddress>
+iaw22@cam.ac.uk
+</electronicMailAddress>
+</creator>
+<creator>
+<individualName>
+<givenName>Patricio</givenName>
+<surName>Salazar</surName>
+</individualName>
+<email>pas73@cam.ac.uk</email>
+<organizationName>University of Cambridge</organizationName>
+<positionName></positionName>
+<address>
+<deliveryPoint></deliveryPoint>
+<city></city>
+<country>United Kingdom</country>
+<postalCode></postalCode>
+</address>
+<phone>
+
+</phone>
+<electronicMailAddress>
+pas73@cam.ac.uk
+</electronicMailAddress>
+</creator>
+<creator>
+<individualName>
+<givenName>Gabriela</givenName>
+<surName>Montejo-Kovacevich</surName>
+</individualName>
+<email>mgm49@cam.ac.uk</email>
+<organizationName>University of Cambridge</organizationName>
+<positionName></positionName>
+<address>
+<deliveryPoint></deliveryPoint>
+<city></city>
+<country>United Kingdom</country>
+<postalCode></postalCode>
+</address>
+<phone>
+
+</phone>
+<electronicMailAddress>
+mgm49@cam.ac.uk
+</electronicMailAddress>
+</creator>
+    <abstract>
+      <para>These are collection records from the research group of Chris Jiggins at the University of Cambridge derived from almost 20 years of field studies. Many records include images as well as locality data.</para>
+    </abstract>
+    <intellectualRights>
+      <para>This work is licensed under a <ulink url = "https://creativecommons.org/licenses/by/4.0/legalcode" ><citetitle>cc-by</citetitle></ulink>.</para>
+    </intellectualRights>
+  </dataset>
+</eml:eml>
