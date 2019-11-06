@@ -1,0 +1,28 @@
+env/
+*.jpg
+*.png
+*.gif
+*.jpeg
+*.json
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# RAW
+*.raw
+
+# Portable Network Graphics
+*.png
+
+# Tagged Image File Format
+*.tiff
+*.tif
+
+# Scalable Vector Graphics
+*.svg
+*.svgz
+
+# Portable Document Format
+*.pdf
+.DS_Store
