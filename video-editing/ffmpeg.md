@@ -11,6 +11,10 @@ Filter documentation: [https://ffmpeg.org/ffmpeg-filters.html](https://ffmpeg.or
 ```
 brew install ffmpeg
 ```
+or 
+```
+pip install ffmpeg
+```
 
 ### Basic Use
 

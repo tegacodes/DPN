@@ -44,13 +44,23 @@ def resize_image(file):
 
     im.save(thumbpath, quality=50) #set image quality
 
+def rename_image(collection):
+    for i, filename in enumerate(os.listdir(collection)):
+        os.rename(collection+filename, "image" + str(i) + ".jpg")
+
 
 if __name__ == "__main__":
+    #download images
     get_images(10) 
-    for image_file in glob.iglob('images/*.jpg'): #resize .jpgs
-        resize_image(image_file)
-    for image_file in glob.iglob('images/*.JPG'): #resize .JPGs
-        resize_image(image_file)
+
+    #resize images 
+    #for image_file in glob.iglob('images/*.JPG'): 
+        #resize_image(image_file)
+    #for image_file in glob.iglob('thumbs/*.JPG'): #resize .jpgs
+        #rename_image('thumbs/')
+
+    #for image_file in glob.iglob('images/*.JPG'): #resize .JPGs
+        #resize_image(image_file)
 
             
 
