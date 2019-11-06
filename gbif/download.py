@@ -4,18 +4,19 @@ import os
 import glob
 from PIL import Image
 
-def get_images():
+def get_images(num):
 
-    if not os.path.exists('images'):
+    if not os.path.exists('images'): #make image folder 
         os.mkdir("images")
 
-
-
-    with open('data/multimedia.csv') as csvfile:
+    with open('data/multimedia.csv') as csvfile: #open csv file
         readCSV = csv.reader(csvfile, delimiter=',')
         next(readCSV) # skip the header line
 
-        for row in readCSV:
+        for i, row in enumerate(readCSV): 
+            if i > num: #download certain number of images
+                break
+        #for row in readCSV: #uncomment to download entire dataset
             url = row[2]
             local_name = "images/"+url.split("/")[-1]
             if os.path.exists(local_name):
@@ -29,52 +30,27 @@ def get_images():
             open(local_name, 'wb').write(results.content)
 
 
-def resize_images(file, folder):
-    os.getcwd()
-    if not os.path.exists(folder):
-        os.mkdir(folder)
-
-    im = Image.open(file)
-    print(im.size)
-    thumbpath = thumbs + "/" + os.path.basename(file)
-    thumbpath = thumbpath.replace(".tif", ".jpg")
-    #im.save(thumbs+'/'++"_thumb.jpg", quality=50)
-    im.save(thumbpath, quality=50)
-
-
-def resize():
-    path = os.getcwd()
-    images_dir = path+"/images/"
-    print(images_dir)
-    for item in images_dir:
-        if os.path.isfile(images_dir+item):
-            im = Image.open(images_dir+item)
-            f, e = os.images_dir.splitext(images_dir+item)
-            imResize = im.resize((200,200), Image.ANTIALIAS)
-            imResize.save(f + ' resized.jpg', 'JPEG', quality=50)
-
-def crop_image(file, folder):
+def resize_image(file):
     print("Resizing images")
-    # thumbs="/Users/tegabrain/Documents/PROJECTS/Current/2019-Vienna/sat-tiles/"+location+"-thumbs"
-    thumbs=folder+"-thumbs"
+    thumbs="thumbs"
 
     print(thumbs)
     if not os.path.exists(thumbs):
         os.mkdir(thumbs)
     im = Image.open(file)
     print(im.size)
-    #thumbpath = os.path.dirname(file) + location+"thumbs" + os.path.basename(file)
+    im.thumbnail((600,400)) #set image size you want
     thumbpath = thumbs + "/" + os.path.basename(file)
-    thumbpath = thumbpath.replace(".tif", ".jpg")
-    #im.save(thumbs+'/'++"_thumb.jpg", quality=50)
-    im.save(thumbpath, quality=50)
+
+    im.save(thumbpath, quality=50) #set image quality
+
 
 if __name__ == "__main__":
-    resize()
-    path = os.getcwd()
-    #images_dir = path+"/images/"
-    for image_file in glob.iglob(path+'images/*.jpg'):
-        crop_image(image_file, folder)
+    get_images(10) 
+    for image_file in glob.iglob('images/*.jpg'): #resize .jpgs
+        resize_image(image_file)
+    for image_file in glob.iglob('images/*.JPG'): #resize .JPGs
+        resize_image(image_file)
 
             
 

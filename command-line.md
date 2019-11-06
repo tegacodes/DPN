@@ -1,4 +1,4 @@
-# Reader 01 - The Command Line
+# The Command Line
 
 The command line is a text-based interface for interacting with your computer. From the command line you can launch programs, view files, and manipulate your file system by making, moving, and copying files and directories. You can think of it as the Finder in Mac, without the graphic interface, but much more powerful.
 
@@ -247,7 +247,34 @@ Make a folder called `images` and move all jpeg images into it:
 ```bash
 mkdir images
 mv *.jpg images/
+
+
 ```
+
+## Finding and Replacing
+
+You can use the `tr` command to manipulate characters in lines of files.
+
+This will delete all instances of the letter "e"
+
+```bash
+"help" | tr -d "e"
+```
+
+This will replace instances of "e" with "a".
+
+```bash
+echo "help" | tr -s "e" "a"
+```
+
+You can also use the `sed` command to find and replace characters.
+
+This will replace all instances of "good" with "bad" in a file.
+
+```bash
+sed 's/good/bad/g' filename.txt
+```
+
 
 
 ## Tips
